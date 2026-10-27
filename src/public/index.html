@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Monitoring System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header><h1>🌦️ Weather Monitoring & Rainfall Prediction</h1></header>
+    <main>
+        <section class="card">
+            <h2>Add New Station</h2>
+            <form id="station-form">
+                <input type="text" id="name" placeholder="Station Name (e.g., Tehran)" required>
+                <input type="number" step="any" id="lat" placeholder="Latitude (e.g., 35.68)" required>
+                <input type="number" step="any" id="lon" placeholder="Longitude (e.g., 51.38)" required>
+                <button type="submit">Register Station</button>
+            </form>
+        </section>
+
+        <section class="card">
+            <h2>Registered Stations</h2>
+            <ul id="station-list">
+                <li>Loading...</li>
+            </ul>
+        </section>
+
+        <section class="card" id="result-card" style="display: none; border: 2px solid #2563eb;">
+            <h2>🌧️ Rainfall Prediction</h2>
+            <div id="prediction-result"></div>
+        </section>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
